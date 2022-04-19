@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "fpet-e9686"
+  },
+  "targets": {
+    "fpet-e9686": {
+      "hosting": {
+        "app": [
+          "fpet-e9686"
+        ]
+      }
+    }
+  }
+}
