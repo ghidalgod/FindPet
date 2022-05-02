@@ -1,0 +1,31 @@
+<ion-content class="ion-padding">
+  <ion-row></ion-row>
+  <ion-row></ion-row>
+
+  <ion-img src="assets/img/FindPetsICON.png"></ion-img>
+
+  <ion-title class="ion-text-center" size="large"> FindPets </ion-title>
+  <form [formGroup]="credentials" (ngSubmit)="login()">
+
+
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="email" placeholder="Email" formControlName="email"> </ion-input>
+      <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email no válido</ion-note>
+    </ion-item>
+
+    <ion-item fill="solid" class="ion-margin-bottom">
+      <ion-input type="password" placeholder="Contraseña" formControlName="password"> </ion-input>
+      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Contraseña no válida
+      </ion-note>
+    </ion-item>
+
+
+
+    <ion-button expand="full" type="submit" [disabled]="!credentials.valid">Iniciar Sesión <img
+        src="../assets/img/iniciar.png" style="width : 40% ; height : 80%"></ion-button>
+    <ion-button expand="full" type="button" (click)="register()">Registrarse <img src="../assets/img/registrar.png"
+        style="width : 150% ; height : 80%"></ion-button>
+
+  </form>
+
+</ion-content>
